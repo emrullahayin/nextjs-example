@@ -1,24 +1,15 @@
 import Layout from '../components/layout';
-import { useRouter } from 'next/router';
+import useTranslation from 'next-translate/useTranslation';
 
-function HomePage(props) {
+function HomePage() {
+  let { t } = useTranslation();
+
   return (
     <Layout>
-      <hr />
-      <h1>{props.title}</h1>
-      <hr />
+      <h3 className="mt-3">{t('home:title')}</h3>
+      <p>{t('home:description')}</p>
     </Layout>
   );
-}
-
-export async function getStaticProps({ locale }) {
-  let title = locale === 'tr' ? 'Anasayfa' : 'Home';
-  return {
-    props: {
-      title,
-      locale,
-    },
-  };
 }
 
 export default HomePage;

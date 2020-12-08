@@ -1,15 +1,13 @@
 import Layout from '../components/layout';
-import { useRouter } from 'next/router';
+import useTranslation from 'next-translate/useTranslation';
 
 function About() {
-  let router = useRouter();
-  let title = router.locale === 'tr' ? 'Hakkında' : 'About';
+  let { t } = useTranslation();
 
   return (
     <Layout>
-      <hr />
-      <h1>{title}</h1>
-      <hr />
+      <h3 className="mt-3">{t('about:title')}</h3>
+      <p>{t('about:description')}</p>
     </Layout>
   );
 }
