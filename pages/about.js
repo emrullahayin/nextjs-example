@@ -10,7 +10,7 @@ function About() {
       <Head>
         <title>{t('about:title')}</title>
       </Head>
-      <p>{t('about:description')}</p>
+      <p className="fs-5">{t('about:description')}</p>
     </Layout>
   );
 }
