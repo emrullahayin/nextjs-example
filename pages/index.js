@@ -22,7 +22,7 @@ function HomePage(stars) {
             />
             <div className="card-body">
               {/* <h5 class="card-title">Card title</h5> */}
-              <p className="card-text fs-5">{t('home:description')}</p>
+              <p className="card-text">{t('home:description')}</p>
             </div>
           </div>
         </div>
