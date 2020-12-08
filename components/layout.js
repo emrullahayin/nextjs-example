@@ -18,9 +18,10 @@ export default function Layout({ children }) {
               <li className="nav-item">
                 <Link href="/">
                   <a
-                    className={
-                      router.pathname === '/' ? 'nav-link active' : 'nav-link'
-                    }
+                    className={cx(
+                      'nav-link',
+                      router.pathname === '/' ? 'active' : ''
+                    )}
                   >
                     {t('common:home')}
                   </a>
@@ -54,11 +55,12 @@ export default function Layout({ children }) {
               <li className="nav-item me-2" key={locale}>
                 <Link href={router.asPath} locale={locale}>
                   <a
-                    className={
+                    className={cx(
+                      'btn',
                       router.locale === locale
-                        ? 'btn btn-outline-primary'
-                        : 'btn btn-outline-secondary'
-                    }
+                        ? 'btn-outline-primary disabled'
+                        : 'btn-outline-secondary'
+                    )}
                   >
                     {locale}
                   </a>
