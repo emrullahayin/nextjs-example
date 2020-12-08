@@ -1,4 +1,5 @@
 import Layout from '../components/layout';
+import Head from 'next/head';
 import useTranslation from 'next-translate/useTranslation';
 
 function About() {
@@ -6,7 +7,9 @@ function About() {
 
   return (
     <Layout>
-      <h3 className="mt-3">{t('about:title')}</h3>
+      <Head>
+        <title>{t('about:title')}</title>
+      </Head>
       <p>{t('about:description')}</p>
     </Layout>
   );

@@ -43,7 +43,9 @@ export default function Layout({ children }) {
           </div>
         </nav>
       </header>
-      <div className="container">{children}</div>
+      <div className="content p-4">
+        <div className="container">{children}</div>
+      </div>
       <footer className="bg-light py-3">
         <div className="container">
           <ul className="nav">
