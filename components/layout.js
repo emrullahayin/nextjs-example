@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import classNames from 'classnames';
+import cx from 'classnames';
 import { useRouter } from 'next/router';
 import useTranslation from 'next-translate/useTranslation';
 import styles from '../styles/layout.module.scss';
@@ -10,7 +10,7 @@ export default function Layout({ children }) {
   let { t } = useTranslation();
 
   return (
-    <main className={classNames(styles.main, 'd-flex flex-column')}>
+    <main className={cx(styles.main, 'd-flex flex-column')}>
       <header>
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <div className="container justify-content-start">
@@ -44,7 +44,7 @@ export default function Layout({ children }) {
           </div>
         </nav>
       </header>
-      <div className={classNames(styles.content, 'flex-fill')}>
+      <div className={cx(styles.content, 'flex-fill')}>
         <div className="container">{children}</div>
       </div>
       <footer className="bg-light py-3">
